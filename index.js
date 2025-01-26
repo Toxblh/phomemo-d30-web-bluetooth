@@ -114,11 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		navigator.bluetooth
 			.requestDevice({
 				acceptAllDevices: true,
-				optionalServices: ["0000ff00-0000-1000-8000-00805f9b34fb"],
+				optionalServices: ["0000fff0-0000-1000-8000-00805f9b34fb"],
 			})
 			.then((device) => device.gatt.connect())
-			.then((server) => server.getPrimaryService("0000ff00-0000-1000-8000-00805f9b34fb"))
-			.then((service) => service.getCharacteristic("0000ff02-0000-1000-8000-00805f9b34fb"))
+			.then((server) => server.getPrimaryService("0000fff0-0000-1000-8000-00805f9b34fb"))
+			.then((service) => service.getCharacteristic("0000fff2-0000-1000-8000-00805f9b34fb"))
 			.then((char) => printCanvas(char, canvas))
 			.catch(handleError);
 	});
