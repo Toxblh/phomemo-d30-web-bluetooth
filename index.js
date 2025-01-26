@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			})
 			.then((device) => device.gatt.connect())
 			.then((server) => server.getPrimaryService("0000fff0-0000-1000-8000-00805f9b34fb"))
-			.then((service) => service.getCharacteristic("0000fff2-0000-1000-8000-00805f9b34fb"))
+			.then((service) => service.getCharacteristic("0000fff4-0000-1000-8000-00805f9b34fb"))
 			.then((char) => printCanvas(char, canvas))
 			.catch(handleError);
 	});
